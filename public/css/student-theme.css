@@ -1,0 +1,177 @@
+/* theme-signature: wimonsiri-warm-editorial */
+:root {
+    --student-primary: #a63f2b;
+    --student-ink: #29231f;
+    --student-muted: #75675c;
+    --student-paper: #fbf6ec;
+    --student-paper-deep: #f0e5d4;
+    --student-rust: #a63f2b;
+    --student-mustard: #c9922e;
+    --student-line: #cbb9a2;
+    --student-font: Georgia, "Noto Serif Thai", serif;
+    --student-sans: "Segoe UI", "Noto Sans Thai", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; background: #e8ddcc; }
+body,
+body.bg-light {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--student-ink) !important;
+    background:
+        repeating-linear-gradient(0deg, rgb(94 67 45 / .025), rgb(94 67 45 / .025) 1px, transparent 1px, transparent 5px),
+        var(--student-paper) !important;
+    font-family: var(--student-font) !important;
+    line-height: 1.75;
+}
+
+/* A newspaper masthead: centered title, double rules, horizontal sections. */
+.navbar,
+.navbar.bg-dark,
+.navbar.bg-white {
+    position: relative;
+    z-index: 1030;
+    display: block;
+    padding: 0 !important;
+    color: var(--student-ink) !important;
+    background: var(--student-paper) !important;
+    border: 0 !important;
+    border-top: 7px solid var(--student-ink) !important;
+    border-bottom: 4px double var(--student-ink) !important;
+    box-shadow: none !important;
+}
+.navbar::before {
+    content: "THE COURSE JOURNAL  •  LARAVEL EDITION";
+    display: block;
+    padding: .45rem 1rem;
+    color: var(--student-muted);
+    border-bottom: 1px solid var(--student-line);
+    font: 700 .68rem/1.2 var(--student-sans);
+    letter-spacing: .18em;
+    text-align: center;
+}
+.navbar > .container,
+.navbar > .container-fluid {
+    display: flex;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    flex-direction: column;
+}
+.navbar-brand {
+    display: block;
+    width: 100%;
+    margin: 0 !important;
+    padding: 1.3rem .5rem .95rem !important;
+    color: var(--student-ink) !important;
+    font: 800 clamp(1.65rem, 4vw, 3.2rem)/1.15 var(--student-font) !important;
+    letter-spacing: -.045em;
+    text-align: center;
+    white-space: normal;
+}
+.navbar-brand::after { content: "  —  บันทึกการเรียนรู้"; color: var(--student-rust); font-size: .42em; font-style: italic; letter-spacing: 0; }
+.navbar-toggler { align-self: center; margin-bottom: .6rem; border-color: var(--student-ink) !important; }
+.navbar-collapse { width: 100%; border-top: 1px solid var(--student-line); }
+.navbar-nav { justify-content: center; align-items: center; gap: .15rem; }
+.navbar-nav.me-auto { margin: 0 auto !important; }
+.navbar-nav.ms-auto { margin: 0 auto !important; border-left: 1px solid var(--student-line); }
+.navbar .nav-link {
+    padding: .7rem .75rem !important;
+    color: var(--student-ink) !important;
+    font: 700 .78rem/1.2 var(--student-sans);
+    letter-spacing: .055em;
+    text-transform: uppercase;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus { color: var(--student-rust) !important; text-decoration: underline; text-underline-offset: .25rem; }
+.dropdown-menu { background: var(--student-paper); border: 1px solid var(--student-ink); border-radius: 0; box-shadow: 6px 6px 0 rgb(41 35 31 / .14); }
+.dropdown-item { color: var(--student-ink); font-family: var(--student-sans); }
+.dropdown-item:hover { color: #fff; background: var(--student-rust); }
+
+#app > main,
+body > main.container {
+    position: relative;
+    z-index: 1;
+    width: min(100% - 2rem, 1120px) !important;
+    max-width: 1120px !important;
+    margin: 0 auto !important;
+    padding: 3rem 0 5rem !important;
+}
+#app > main > .container { max-width: 1120px; }
+
+h1, h2, h3, h4, h5, h6 { color: var(--student-ink) !important; font-family: var(--student-font) !important; }
+h1 { font-size: clamp(2.15rem, 5vw, 4.25rem); line-height: 1.08; letter-spacing: -.055em; }
+h2 { letter-spacing: -.035em; }
+h1::first-letter { color: var(--student-rust); }
+p { max-width: 72ch; }
+a { color: var(--student-rust); }
+a:hover { color: #70291d; }
+.hero,
+.bg-white,
+.bg-light {
+    color: var(--student-ink) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-top: 1px solid var(--student-ink) !important;
+    border-bottom: 1px solid var(--student-ink) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+.hero, main .p-5 { padding-left: 0 !important; padding-right: 0 !important; }
+.hero::after,
+main .p-5::after {
+    content: "FEATURE STORY";
+    position: absolute;
+    top: .6rem;
+    right: 0;
+    color: var(--student-rust);
+    font: 800 .65rem/1 var(--student-sans);
+    letter-spacing: .15em;
+}
+.card,
+article {
+    color: var(--student-ink) !important;
+    background: rgb(255 252 245 / .72) !important;
+    border: 0 !important;
+    border-top: 3px solid var(--student-ink) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+.card-header { background: var(--student-paper-deep) !important; border-bottom: 1px solid var(--student-line) !important; font-weight: 700; }
+.row > [class*="col"]:nth-child(even) .card { border-top-color: var(--student-rust) !important; }
+.table { --bs-table-bg: transparent; --bs-table-color: var(--student-ink); --bs-table-striped-bg: rgb(203 185 162 / .18); --bs-table-hover-bg: rgb(166 63 43 / .08); border-color: var(--student-line) !important; }
+.table thead th { color: #fffaf1 !important; background: var(--student-ink) !important; font: 700 .75rem/1.2 var(--student-sans); letter-spacing: .08em; text-transform: uppercase; }
+.btn { border-radius: 0 !important; font-family: var(--student-sans); font-weight: 700; }
+.btn-primary { color: #fffaf1 !important; background: var(--student-rust) !important; border-color: var(--student-rust) !important; box-shadow: 4px 4px 0 var(--student-ink); }
+.btn-primary:hover { color: #fff !important; background: #7d2d20 !important; transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--student-ink); }
+.form-control, .form-select, textarea { color: var(--student-ink) !important; background: #fffdf7 !important; border: 1px solid var(--student-line) !important; border-bottom: 2px solid var(--student-ink) !important; border-radius: 0 !important; }
+.form-control:focus, .form-select:focus, textarea:focus { border-color: var(--student-rust) !important; box-shadow: 0 0 0 .2rem rgb(166 63 43 / .12) !important; }
+.pagination .page-link { color: var(--student-ink); background: transparent; border-color: var(--student-line); border-radius: 0 !important; }
+.pagination .active > .page-link { color: #fff; background: var(--student-rust); border-color: var(--student-rust); }
+.alert { border-radius: 0 !important; border-left-width: 5px !important; }
+
+/* Early standalone lessons become a compact front page instead of an app shell. */
+body:not(:has(.navbar)):not(:has(#app)) { width: min(100% - 2rem, 980px); margin: 0 auto; padding: 3rem 0 6rem; border-top: 7px solid var(--student-ink); }
+body:not(:has(.navbar)):not(:has(#app))::before { content: "WIMONSIRI'S COURSE JOURNAL"; display: block; padding: 1rem 0 1.4rem; border-bottom: 4px double var(--student-ink); font: 800 clamp(1.5rem, 4vw, 3rem)/1.1 var(--student-font); text-align: center; }
+body:not(:has(.navbar)):not(:has(#app)) > h1,
+body:not(:has(.navbar)):not(:has(#app)) > h2 { margin: 3rem 0 1rem; }
+body:not(:has(.navbar)):not(:has(#app)) > a { display: inline-block; margin: 1.2rem 1rem 0 0; padding-bottom: .2rem; border-bottom: 2px solid var(--student-rust); font: 700 .8rem/1.2 var(--student-sans); letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
+
+@media (min-width: 992px) {
+    .navbar-collapse { display: grid !important; grid-template-columns: 1fr auto 1fr; }
+    .navbar-collapse::before { content: "VOL. 01"; color: var(--student-muted); align-self: center; font: 700 .65rem/1 var(--student-sans); letter-spacing: .14em; }
+}
+@media (max-width: 991.98px) {
+    .navbar > .container, .navbar > .container-fluid { flex-direction: row; flex-wrap: wrap; }
+    .navbar-brand { width: auto; flex: 1; text-align: left; font-size: 1.45rem !important; }
+    .navbar-brand::after { display: none; }
+    .navbar-collapse { flex-basis: 100%; }
+    .navbar-nav { align-items: stretch; }
+    .navbar-nav.ms-auto { border-left: 0; border-top: 1px solid var(--student-line); }
+    #app > main, body > main.container { padding-top: 2rem !important; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .btn, .navbar .nav-link { transition: color .18s ease, transform .18s ease, box-shadow .18s ease; }
+}
